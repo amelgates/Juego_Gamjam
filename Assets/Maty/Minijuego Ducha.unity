@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &780562874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -870,3 +870,4 @@ MonoBehaviour:
   warningText: {fileID: 1301926846}
   timerText: {fileID: 1133273659}
   globeDialogueCanva: {fileID: 780562873}
+  timer: 0
