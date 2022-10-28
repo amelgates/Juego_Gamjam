@@ -11,6 +11,7 @@ public class CodigoText : MonoBehaviour
     public TextMeshProUGUI warningText;
     public TextMeshProUGUI timerText;
     public GameObject globeDialogueCanva;
+    public GameObject timerCanva;
 
     public int liters;
     public int timer;
