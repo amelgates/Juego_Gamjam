@@ -33,7 +33,7 @@ public class CerrarDucha : MonoBehaviour
             sliderCanva.SetActive(true);
         }
 
-        if(sliderProgress.value == 5 | CodigoText.codigoInstance.timer >= 20)
+        if(sliderProgress.value == 2 | CodigoText.codigoInstance.timer >= 20)
         {
             showLitersCanva();
             CodigoText.codigoInstance.timerRun = false;
