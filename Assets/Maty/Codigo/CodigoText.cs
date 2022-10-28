@@ -6,7 +6,7 @@ using TMPro;
 
 public class CodigoText : MonoBehaviour
 {
-    public static CodigoText codigoInstance;
+    public static CodigoText codigoInstance; 
 
     public TextMeshProUGUI warningText;
     public TextMeshProUGUI timerText;
@@ -14,6 +14,7 @@ public class CodigoText : MonoBehaviour
 
     public int liters;
     public int timer;
+    public bool timerRun = true;
     public float timerFloat;
 
     private void Awake()
@@ -25,30 +26,35 @@ public class CodigoText : MonoBehaviour
         Timer();
         timerText.text = "Llevas " + timer.ToString() + " minutos en la ducha";
 
-        if (timer == 10)
+        if (timer == 5)
         {
             globeDialogueCanva.SetActive(true);
             warningText.text = "¡Es hora de cortar el agua!";
-            liters = 100;
+            liters = 50;
         }
-        if(timer > 14)
+        if(timer > 9)
         {
             warningText.text = "¡Estas desperdiciando agua!";
-            liters = 150;
+            liters = 100;
         }
-        if (timer > 19)
+        if (timer > 14)
         {
             warningText.text = "¡Te saldra cara la cuenta del agua!";
-            liters = 200;
+            liters = 150;
         }
-        if (timer >=24)
+        if (timer == 20)
         {
-            liters = 250;
+            liters = 200;
+            timerRun = false;
         }
     }
     void Timer()
     {
+        if(timerRun == true)
+        {
         timerFloat += Time.deltaTime;
         timer = Mathf.RoundToInt(timerFloat);
+        }
+
     }
 }

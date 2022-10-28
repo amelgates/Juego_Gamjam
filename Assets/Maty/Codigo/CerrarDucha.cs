@@ -22,19 +22,21 @@ public class CerrarDucha : MonoBehaviour
     private void Update()
     {
         sliderProgress.value = progressFloat;
+
         if (Input.GetMouseButton(0))
         {
             progressFloat += Time.deltaTime;
         }
 
-        if (CodigoText.codigoInstance.timer >= 10)
+        if (CodigoText.codigoInstance.timer >= 5)
         {
             sliderCanva.SetActive(true);
         }
 
-        if(sliderProgress.value == 5)
+        if(sliderProgress.value == 5 | CodigoText.codigoInstance.timer >= 20)
         {
             showLitersCanva();
+            CodigoText.codigoInstance.timerRun = false;
         }
     }
     void showLitersCanva()
