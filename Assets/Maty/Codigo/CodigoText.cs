@@ -23,6 +23,7 @@ public class CodigoText : MonoBehaviour
     }
     void Update()
     {
+        Timer();
         timerText.text = "Llevas " + timer.ToString() + " minutos en la ducha";
 
         if (timer == 5)
