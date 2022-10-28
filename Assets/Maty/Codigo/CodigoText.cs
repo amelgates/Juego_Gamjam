@@ -11,7 +11,6 @@ public class CodigoText : MonoBehaviour
     public TextMeshProUGUI warningText;
     public TextMeshProUGUI timerText;
     public GameObject globeDialogueCanva;
-    public GameObject buttonCanva;
 
     public int liters;
     public int timer;
@@ -24,11 +23,11 @@ public class CodigoText : MonoBehaviour
     void Update()
     {
         Timer();
+        timerText.text = "Llevas " + timer.ToString() + " minutos en la ducha";
 
-        if (timer == 9)
+        if (timer == 10)
         {
             globeDialogueCanva.SetActive(true);
-            buttonCanva.SetActive(true);
             warningText.text = "¡Es hora de cortar el agua!";
             liters = 100;
         }
@@ -47,10 +46,9 @@ public class CodigoText : MonoBehaviour
             liters = 250;
         }
     }
-    public void Timer()
+    void Timer()
     {
         timerFloat += Time.deltaTime;
         timer = Mathf.RoundToInt(timerFloat);
-        timerText.text = "Llevas " + timer.ToString() + " minutos en la ducha";
     }
 }

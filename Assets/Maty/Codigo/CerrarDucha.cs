@@ -6,15 +6,42 @@ using TMPro;
 
 public class CerrarDucha : MonoBehaviour
 {
+    public static CerrarDucha cerrarDuchaInstace;
+
     public GameObject literCanva;
-
+    public GameObject sliderCanva;
     public TextMeshProUGUI literText;
+    public Slider sliderProgress;
 
-    void StopShowering()
+    private float progressFloat;
+
+    private void Awake()
+    {
+        cerrarDuchaInstace = this;
+    }
+    private void Update()
+    {
+        sliderProgress.value = progressFloat;
+        if (Input.GetMouseButton(0))
+        {
+            progressFloat += Time.deltaTime;
+        }
+
+        if (CodigoText.codigoInstance.timer >= 10)
+        {
+            sliderCanva.SetActive(true);
+        }
+
+        if(sliderProgress.value == 5)
+        {
+            showLitersCanva();
+        }
+    }
+    void showLitersCanva()
     {
         CodigoText.codigoInstance.globeDialogueCanva.SetActive(false);
-        CodigoText.codigoInstance.buttonCanva.SetActive(false);
+        sliderCanva.SetActive(false);
         literCanva.SetActive(true);
-        literText.text = "Usaste " + CodigoText.codigoInstance.liters.ToString() + " litros de agua";
+        literText.text = "Utilizaste " + CodigoText.codigoInstance.liters.ToString() + " litros";
     }
 }
