@@ -13,22 +13,38 @@ public class ManagerMinijuego : MonoBehaviour
     public Transform spawnTransform;
 
     public float spawnDelay;
+    public bool juegoTerminado;
+    public GameObject canvas1;
+    public GameObject canvas2;
 
     private void Update()
     {
         ActualizarPuntaje();
 
          spawnDelay = spawnDelay - 1 * Time.deltaTime;
-        if(spawnDelay <= 0)
+        if(!juegoTerminado)
         {
-            SpawnItems();
-            
-        }
-       
-        
+            if (spawnDelay <= 0)
+            {
+                SpawnItems();
 
+            }
+
+
+            if (puntaje >= 10)
+            {
+                FinDelJuego();
+            }
+        }
     }
 
+    public void FinDelJuego()
+    {
+        juegoTerminado = true;
+        canvas1.SetActive(false);
+        canvas2.SetActive(true);
+
+    }
 
     public void ActualizarPuntaje()
     {

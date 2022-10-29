@@ -6,6 +6,7 @@ public class AgarrarObjetos : MonoBehaviour
 {
     Rigidbody2D rbSelect;
     public float fuerza = 500;
+    public float tiempoDeVida = 3;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,6 +35,11 @@ public class AgarrarObjetos : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             rbSelect = null;
+        }
+        tiempoDeVida = tiempoDeVida - 1 * Time.deltaTime;
+        if(tiempoDeVida <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 

@@ -36,6 +36,10 @@ public class ImagenManager : MonoBehaviour
     public GameObject duchaProgreso;
     public GameObject duchaLitros;
     public GameObject duchaControl;
+    public GameObject basuraBasureros;
+    public GameObject basuraManager;
+    public GameObject basuraCanvas1;
+    public GameObject basuraCanvas2;
 
     public void Awake()
     {
@@ -71,6 +75,8 @@ public class ImagenManager : MonoBehaviour
         if (instruccionesReady)
         {
             basuraMinigame.SetActive(true);
+            basuraCanvas1.SetActive(true);
+            basuraCanvas2.SetActive(false);
             pieza.SetActive(false);
         }
         if(basuraReady)
@@ -150,5 +156,30 @@ public class ImagenManager : MonoBehaviour
         contadorVecino += 1;
         pieza.SetActive(true);
         vecinosEspacio.SetActive(false);
+    }
+
+    public void BasuraFinish()
+    {
+        basuraReady = true;
+        basuraMinigame.SetActive(false);
+        vecinosEspacio.SetActive(true);
+        if(contadorVecino == 1)
+        {
+            abuela.SetActive(false);
+            empresario.SetActive(false);
+            punki.SetActive(true);
+        }
+        if(contadorVecino == 2)
+        {
+            punki.SetActive(false);
+            empresario.SetActive(false);
+            abuela.SetActive(true);
+        }
+        if(contadorVecino == 3)
+        {
+            abuela.SetActive(false);
+            punki.SetActive(false);
+            empresario.SetActive(false);
+        }
     }
 }
