@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3058511553931017712}
   - component: {fileID: 3058511553931017715}
   - component: {fileID: 3058511553931017714}
-  - component: {fileID: 3058511553931017710}
+  - component: {fileID: 9092301141965567403}
   m_Layer: 0
   m_Name: Plastico
   m_TagString: Plastico
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3058511553931017717}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.06, y: 8.13, z: 4.7}
-  m_LocalScale: {x: 1.6718, y: 1.6718, z: 1.6718}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1.6718}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -120,9 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9249d5bd200314a813fab0c8dbc0af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuerza: 600
---- !u!58 &3058511553931017710
-CircleCollider2D:
+  fuerza: 1500
+--- !u!61 &9092301141965567403
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -131,9 +131,19 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.67, y: 2.91}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.49999997
+  m_Size: {x: 2.67, y: 2.91}
+  m_EdgeRadius: 0
