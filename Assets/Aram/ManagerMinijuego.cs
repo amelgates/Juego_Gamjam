@@ -26,7 +26,12 @@ public class ManagerMinijuego : MonoBehaviour
         }
        
         
+        if(puntaje >= 10)
+        {
 
+        }
+
+       
     }
 
 

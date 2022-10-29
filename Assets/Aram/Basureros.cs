@@ -20,7 +20,7 @@ public class Basureros : MonoBehaviour
         {
             print("Incorrecto");
              mg.puntaje -= 1;
-
+        
         }
     }
 
