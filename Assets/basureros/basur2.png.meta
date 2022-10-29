@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c0508c12bc5138b46819a4386f14f398
+guid: 1d9c0727463ff5e4b8a68b88ac78de1b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: botones_0
+      name: basur2_0
       rect:
         serializedVersion: 2
-        x: 2218
-        y: 3264
-        width: 2866
-        height: 553
+        x: 0
+        y: 0
+        width: 1045
+        height: 1628
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,29 +118,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 991816d3014f00d43838c1827fe54bdb
-      internalID: -2004111395
+      spriteID: 9cad4fe1f7435654da977da6704e7364
+      internalID: -147946076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: botones_1
+      name: basur2_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2027
-        width: 2188
-        height: 730
+        x: 1282
+        y: 0
+        width: 1052
+        height: 1628
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 153}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cc1ced3faa401c49939e19f2f9414e0
-      internalID: -914585030
+      spriteID: 05f25c5603e9f9f49b4e1002301afe4a
+      internalID: -425174586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basur2_2
+      rect:
+        serializedVersion: 2
+        x: 2594
+        y: 0
+        width: 1052
+        height: 1628
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e19ca256ac079428d636edc8d452b4
+      internalID: -1576011852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basur2_3
+      rect:
+        serializedVersion: 2
+        x: 4049
+        y: 0
+        width: 1062
+        height: 1628
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 14, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1d189d075c22ff428324893a01123f8
+      internalID: -1687657612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basur2_4
+      rect:
+        serializedVersion: 2
+        x: 5477
+        y: 0
+        width: 1117
+        height: 1628
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 74, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e69b4201a9a3d984fba0e35fbad8baf8
+      internalID: -382966036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basur2_5
+      rect:
+        serializedVersion: 2
+        x: 6766
+        y: 0
+        width: 1119
+        height: 1628
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 69, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d3c363d0499fe4083b278b66f5af99
+      internalID: -492108551
       vertices: []
       indices: 
       edges: []
@@ -156,8 +240,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      botones_1: -914585030
-      botones_0: -2004111395
+      basur2_1: -425174586
+      basur2_4: -382966036
+      basur2_0: -147946076
+      basur2_3: -1687657612
+      basur2_2: -1576011852
+      basur2_5: -492108551
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

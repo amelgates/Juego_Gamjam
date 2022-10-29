@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 03252238a41055e4b88f043a45730169
+guid: ab9359a449d9e8444a0e7ca066a7e803
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,122 +100,131 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: capa1_0
+      name: bas_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1049
-        height: 492
+        y: 12
+        width: 1050
+        height: 485
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 9, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1df0d4295002184987113f577a77ecb
-      internalID: 159100524
+      spriteID: 4ab73c458617b3b4391790e06bc3f07e
+      internalID: 558637605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: capa1_1
+      name: bas_1
       rect:
         serializedVersion: 2
-        x: 1721
+        x: 1268
         y: 0
-        width: 1055
-        height: 492
+        width: 1071
+        height: 497
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 14, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 399f24354c7ed53479f63eab55833f9f
-      internalID: 1956775893
+      spriteID: b5e6d4a0f80c24e42921a1fe5c990d2f
+      internalID: -232847073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: capa1_2
+      name: bas_2
       rect:
         serializedVersion: 2
-        x: 3475
+        x: 2607
         y: 0
-        width: 1055
-        height: 492
+        width: 1053
+        height: 497
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 19, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78ed6b075c35f2142b77e321a42390a9
-      internalID: 905097070
+      spriteID: df1cd0880685e0c4195193588d289f56
+      internalID: -1803617092
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: capa1_3
+      name: bas_3
       rect:
         serializedVersion: 2
-        x: 5249
+        x: 4054
         y: 0
         width: 1057
-        height: 492
+        height: 497
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 5, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e16bd94fe5c27ec429b1f9f6a439092b
-      internalID: 197273128
+      spriteID: 04352b6a69241ac448fdfde3fd6004db
+      internalID: -1806700211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: capa1_4
+      name: bas_4
       rect:
         serializedVersion: 2
-        x: 6952
+        x: 5435
         y: 0
-        width: 1049
-        height: 492
+        width: 1103
+        height: 497
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 37, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fa214c7d65ee4b4faf6b78f3646f8d0
-      internalID: 101107418
+      spriteID: 1b34066ae5a94a042907702e7bf73ded
+      internalID: 1887063270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bas_5
+      rect:
+        serializedVersion: 2
+        x: 6807
+        y: 0
+        width: 1078
+        height: 497
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 37, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd74df6fcf565ae40a3197a8f6454bf1
+      internalID: 639463188
       vertices: []
       indices: 
       edges: []
@@ -231,11 +240,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      capa1_3: 197273128
-      capa1_2: 905097070
-      capa1_0: 159100524
-      capa1_1: 1956775893
-      capa1_4: 101107418
+      bas_3: -232847073
+      bas_2: 558637605
+      bas_0: -1152040533
+      bas_1: 1267967060
+      bas_4: -1803617092
+      bas_5: -1806700211
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
