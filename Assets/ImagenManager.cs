@@ -9,7 +9,7 @@ public class ImagenManager : MonoBehaviour
     public bool basuraReady;
     public bool postitReady;
     public bool instruccionesReady;
-    public GameObject canvas;
+    public GameObject canvasImagenes;
     public GameObject postitPanel;
     public GameObject botonesEmpty;
     public GameObject basuraMinigame;
@@ -41,7 +41,7 @@ public class ImagenManager : MonoBehaviour
         else
         {
             contadorImagen += 1;
-            canvas.SetActive(false);
+            canvasImagenes.SetActive(false);
         }
     }
 
