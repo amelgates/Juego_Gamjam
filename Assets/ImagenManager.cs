@@ -29,6 +29,13 @@ public class ImagenManager : MonoBehaviour
     public GameObject punki;
     public GameObject abuela;
     public GameObject empresario;
+    public GameObject duchaDialogo;
+    public GameObject dialogoBasura2;
+    public GameObject duchaTiempo;
+    public GameObject duchaDialogoCanva;
+    public GameObject duchaProgreso;
+    public GameObject duchaLitros;
+    public GameObject duchaControl;
 
     public void Awake()
     {
@@ -47,6 +54,7 @@ public class ImagenManager : MonoBehaviour
         else
         {
             contadorImagen += 1;
+            botonesEmpty.SetActive(true);
             canvasImagenes.SetActive(false);
         }
     }
@@ -62,16 +70,24 @@ public class ImagenManager : MonoBehaviour
     {
         if (instruccionesReady)
         {
-            pieza.SetActive(false);
             basuraMinigame.SetActive(true);
+            pieza.SetActive(false);
+        }
+        if(basuraReady)
+        {
+            botonDucha.SetActive(false);
+            botonInstruc.SetActive(false);
+            botonNota.SetActive(false);
+            dialogoBasura2.SetActive(true);
+            botonBasura.SetActive(false);
         }
         else
         {
-            botonBasura.SetActive(false);
             botonDucha.SetActive(false);
             botonInstruc.SetActive(false);
             botonNota.SetActive(false);
             dialogoNoBasura.SetActive(true);
+            botonBasura.SetActive(false);
         }
     }
 
@@ -99,7 +115,21 @@ public class ImagenManager : MonoBehaviour
         if (basuraReady)
         {
             pieza.SetActive(false);
-            duchaMinigame.SetActive(false);
+            duchaMinigame.SetActive(true);
+            duchaTiempo.SetActive(true);
+            duchaDialogo.SetActive(false);
+            duchaProgreso.SetActive(false);
+            duchaLitros.SetActive(false);
+            duchaControl.SetActive(true);
+
+        }
+        else
+        {
+            botonBasura.SetActive(false);
+            botonDucha.SetActive(false);
+            botonInstruc.SetActive(false);
+            botonNota.SetActive(false);
+            duchaDialogo.SetActive(true);
         }
     }
 
