@@ -7,8 +7,31 @@ public class ImagenManager : MonoBehaviour
 {
     public float contadorImagen = 1;
     public bool basuraReady;
-    public bool duchaReady;
+    public bool postitReady;
+    public bool instruccionesReady;
     public GameObject canvas;
+    public GameObject postitPanel;
+    public GameObject botonesEmpty;
+    public GameObject basuraMinigame;
+    public GameObject pieza;
+    public GameObject dialogoNoBasura;
+    public GameObject botonBasura;
+    public GameObject botonNota;
+    public GameObject botonInstruc;
+    public GameObject botonDucha;
+    public GameObject instrucPanel;
+    public GameObject imagen2;
+    public GameObject imagen3;
+    public GameObject imagen4;
+    public GameObject duchaMinigame;
+
+    public void Awake()
+    {
+        contadorImagen = 1;
+        basuraReady = false;
+        postitReady = false;
+        instruccionesReady = false;
+    }
     public void NextImagen()
     {
         if (contadorImagen == 4)
@@ -22,19 +45,67 @@ public class ImagenManager : MonoBehaviour
         }
     }
 
-    public void BasuraLista()
+    public void BotonPostit()
     {
-        basuraReady = true;
+        postitPanel.SetActive(true);
+        botonesEmpty.SetActive(false);
+        postitReady = true;
     }
 
-    public void DuchaLista()
+    public void BasuraBoton()
     {
-        duchaReady = true;
+        if(instruccionesReady)
+        {
+            pieza.SetActive(false);
+            basuraMinigame.SetActive(true);
+        }
+        else
+        {
+            botonBasura.SetActive(false);
+            botonDucha.SetActive(false);
+            botonInstruc.SetActive(false);
+            botonNota.SetActive(false);
+            dialogoNoBasura.SetActive(true);
+        }
+    }
+
+    public void DuchaFinish()
+    {
+        pieza.SetActive(true);
+        botonesEmpty.SetActive(false);
+        duchaMinigame.SetActive(false);
+        if(contadorImagen == 2)
+        {
+            imagen2.SetActive(true);
+        }
+        if(contadorImagen == 3)
+        {
+            imagen3.SetActive(true);
+        }
+        if(contadorImagen == 4)
+        {
+            imagen4.SetActive(true);
+        }
+    }
+
+    public void DuchaBoton()
+    {
+        if(basuraReady)
+        {
+            pieza.SetActive(false);
+            duchaMinigame.SetActive(false);
+        }
+    }
+    
+    public void InstrucBoton()
+    {
+        instrucPanel.SetActive(true);
+        botonesEmpty.SetActive(false);
+        instruccionesReady = true;
     }
 
     public void ResetBools()
     {
         basuraReady = false;
-        duchaReady = false;
     }
 }
