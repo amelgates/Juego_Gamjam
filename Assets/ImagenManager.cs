@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ImagenManager : MonoBehaviour
 {
     public float contadorImagen = 1;
+    public float contadorVecino = 1;
     public bool basuraReady;
     public bool postitReady;
     public bool instruccionesReady;
@@ -24,10 +25,15 @@ public class ImagenManager : MonoBehaviour
     public GameObject imagen3;
     public GameObject imagen4;
     public GameObject duchaMinigame;
+    public GameObject vecinosEspacio;
+    public GameObject punki;
+    public GameObject abuela;
+    public GameObject empresario;
 
     public void Awake()
     {
         contadorImagen = 1;
+        contadorVecino = 1;
         basuraReady = false;
         postitReady = false;
         instruccionesReady = false;
@@ -54,7 +60,7 @@ public class ImagenManager : MonoBehaviour
 
     public void BasuraBoton()
     {
-        if(instruccionesReady)
+        if (instruccionesReady)
         {
             pieza.SetActive(false);
             basuraMinigame.SetActive(true);
@@ -74,15 +80,15 @@ public class ImagenManager : MonoBehaviour
         pieza.SetActive(true);
         botonesEmpty.SetActive(false);
         duchaMinigame.SetActive(false);
-        if(contadorImagen == 2)
+        if (contadorImagen == 2)
         {
             imagen2.SetActive(true);
         }
-        if(contadorImagen == 3)
+        if (contadorImagen == 3)
         {
             imagen3.SetActive(true);
         }
-        if(contadorImagen == 4)
+        if (contadorImagen == 4)
         {
             imagen4.SetActive(true);
         }
@@ -90,13 +96,13 @@ public class ImagenManager : MonoBehaviour
 
     public void DuchaBoton()
     {
-        if(basuraReady)
+        if (basuraReady)
         {
             pieza.SetActive(false);
             duchaMinigame.SetActive(false);
         }
     }
-    
+
     public void InstrucBoton()
     {
         instrucPanel.SetActive(true);
@@ -107,5 +113,12 @@ public class ImagenManager : MonoBehaviour
     public void ResetBools()
     {
         basuraReady = false;
+    }
+
+    public void VecinoFinal()
+    {
+        contadorVecino += 1;
+        pieza.SetActive(true);
+        vecinosEspacio.SetActive(false);
     }
 }
