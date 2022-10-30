@@ -6,7 +6,7 @@ using TMPro;
 
 public class TextoRandom : MonoBehaviour
 {
-    public TextMeshProUGUI[] randomText;
+    public string[] randomText;
     public TextMeshProUGUI randomTextObject;
     public TextMeshProUGUI showText;
 
@@ -21,6 +21,6 @@ public class TextoRandom : MonoBehaviour
     void RandomText()
     {
         int textPos = Random.Range(0, randomText.Length);
-        randomTextObject = randomText[textPos];
+        randomTextObject.text = randomText[textPos];
     }
 }

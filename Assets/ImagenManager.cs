@@ -21,6 +21,7 @@ public class ImagenManager : MonoBehaviour
     public GameObject botonInstruc;
     public GameObject botonDucha;
     public GameObject instrucPanel;
+    public GameObject imagen1;
     public GameObject imagen2;
     public GameObject imagen3;
     public GameObject imagen4;
@@ -156,6 +157,24 @@ public class ImagenManager : MonoBehaviour
         contadorVecino += 1;
         pieza.SetActive(true);
         vecinosEspacio.SetActive(false);
+        if(contadorImagen == 2)
+        {
+            canvasImagenes.SetActive(true);
+            imagen1.SetActive(false);
+            imagen2.SetActive(true);
+        }
+        if (contadorImagen == 3)
+        {
+            canvasImagenes.SetActive(true);
+            imagen2.SetActive(false);
+            imagen3.SetActive(true);
+        }
+        if (contadorImagen == 4)
+        {
+            canvasImagenes.SetActive(true);
+            imagen3.SetActive(false);
+            imagen4.SetActive(true);
+        }
     }
 
     public void BasuraFinish()
