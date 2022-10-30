@@ -5614,7 +5614,7 @@ MonoBehaviour:
   botonNota: {fileID: 25122733}
   botonInstruc: {fileID: 943135870}
   botonDucha: {fileID: 127997474}
-  botonTele: {fileID: 0}
+  botonTele: {fileID: 1830433632}
   instrucPanel: {fileID: 706554354}
   imagen1: {fileID: 493986793}
   imagen2: {fileID: 1813780574}
