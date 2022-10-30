@@ -20,6 +20,7 @@ public class ImagenManager : MonoBehaviour
     public GameObject botonNota;
     public GameObject botonInstruc;
     public GameObject botonDucha;
+    public GameObject botonTele;
     public GameObject instrucPanel;
     public GameObject imagen1;
     public GameObject imagen2;
@@ -83,6 +84,7 @@ public class ImagenManager : MonoBehaviour
         if(basuraReady)
         {
             botonDucha.SetActive(false);
+            botonTele.SetActive(false);
             botonInstruc.SetActive(false);
             botonNota.SetActive(false);
             dialogoBasura2.SetActive(true);
@@ -92,6 +94,7 @@ public class ImagenManager : MonoBehaviour
         {
             botonDucha.SetActive(false);
             botonInstruc.SetActive(false);
+            botonTele.SetActive(false);
             botonNota.SetActive(false);
             dialogoNoBasura.SetActive(true);
             botonBasura.SetActive(false);
@@ -105,14 +108,20 @@ public class ImagenManager : MonoBehaviour
         duchaMinigame.SetActive(false);
         if (contadorImagen == 2)
         {
+            canvasImagenes.SetActive(true);
+            imagen1.SetActive(false);
             imagen2.SetActive(true);
         }
         if (contadorImagen == 3)
         {
+            canvasImagenes.SetActive(true);
+            imagen2.SetActive(false);
             imagen3.SetActive(true);
         }
         if (contadorImagen == 4)
         {
+            canvasImagenes.SetActive(true);
+            imagen3.SetActive(false);
             imagen4.SetActive(true);
         }
     }
@@ -136,6 +145,7 @@ public class ImagenManager : MonoBehaviour
             botonDucha.SetActive(false);
             botonInstruc.SetActive(false);
             botonNota.SetActive(false);
+            botonTele.SetActive(false);
             duchaDialogo.SetActive(true);
         }
     }
@@ -157,24 +167,6 @@ public class ImagenManager : MonoBehaviour
         contadorVecino += 1;
         pieza.SetActive(true);
         vecinosEspacio.SetActive(false);
-        if(contadorImagen == 2)
-        {
-            canvasImagenes.SetActive(true);
-            imagen1.SetActive(false);
-            imagen2.SetActive(true);
-        }
-        if (contadorImagen == 3)
-        {
-            canvasImagenes.SetActive(true);
-            imagen2.SetActive(false);
-            imagen3.SetActive(true);
-        }
-        if (contadorImagen == 4)
-        {
-            canvasImagenes.SetActive(true);
-            imagen3.SetActive(false);
-            imagen4.SetActive(true);
-        }
     }
 
     public void BasuraFinish()

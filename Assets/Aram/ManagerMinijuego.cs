@@ -62,4 +62,9 @@ public class ManagerMinijuego : MonoBehaviour
         Instantiate(basuras[randomInt], spawnTransform.position, spawnTransform.rotation);
         spawnDelay = 2;
     }
+
+    public void ResetPuntaje()
+    {
+        puntaje = 0;
+    }
 }

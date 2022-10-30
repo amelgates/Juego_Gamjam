@@ -14,8 +14,8 @@ public class TextoRandom : MonoBehaviour
 
     public void ShowRandomText()
     {
-        RandomText();
         showText = randomTextObject;
+        RandomText();
     }
 
     void RandomText()
