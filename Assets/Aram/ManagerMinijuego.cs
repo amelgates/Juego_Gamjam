@@ -65,6 +65,7 @@ public class ManagerMinijuego : MonoBehaviour
 
     public void ResetPuntaje()
     {
+        juegoTerminado = false;
         puntaje = 0;
     }
 }

@@ -106,6 +106,8 @@ public class ImagenManager : MonoBehaviour
         pieza.SetActive(true);
         botonesEmpty.SetActive(false);
         duchaMinigame.SetActive(false);
+        duchaLitros.SetActive(false);
+
         if (contadorImagen == 2)
         {
             canvasImagenes.SetActive(true);
@@ -137,7 +139,6 @@ public class ImagenManager : MonoBehaviour
             duchaProgreso.SetActive(false);
             duchaLitros.SetActive(false);
             duchaControl.SetActive(true);
-
         }
         else
         {
@@ -174,7 +175,7 @@ public class ImagenManager : MonoBehaviour
         basuraReady = true;
         basuraMinigame.SetActive(false);
         vecinosEspacio.SetActive(true);
-        if(contadorVecino == 1)
+        if (contadorVecino == 1)
         {
             abuela.SetActive(false);
             empresario.SetActive(false);

@@ -13,7 +13,7 @@ public class CerrarDucha : MonoBehaviour
     public TextMeshProUGUI literText;
     public Slider sliderProgress;
 
-    private float progressFloat;
+    public float progressFloat;
 
     private void Awake()
     {
@@ -23,7 +23,7 @@ public class CerrarDucha : MonoBehaviour
     {
         sliderProgress.value = progressFloat;
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && sliderProgress.IsActive())
         {
             progressFloat += Time.deltaTime;
         }
