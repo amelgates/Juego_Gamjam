@@ -15,35 +15,47 @@ public class CerrarDucha : MonoBehaviour
 
     public float progressFloat;
 
+    public bool funcionando;
     private void Awake()
     {
         cerrarDuchaInstace = this;
     }
     private void Update()
     {
-        sliderProgress.value = progressFloat;
-
-        if (Input.GetMouseButton(0) && sliderProgress.IsActive())
+        if(funcionando)
         {
-            progressFloat += Time.deltaTime;
-        }
+            sliderProgress.value = progressFloat;
 
-        if (CodigoText.codigoInstance.timer >= 5)
-        {
-            sliderCanva.SetActive(true);
-        }
+            if (Input.GetMouseButton(0) && sliderProgress.IsActive())
+            {
+                progressFloat += Time.deltaTime;
+            }
 
-        if(sliderProgress.value == 2 | CodigoText.codigoInstance.timer >= 20)
-        {
-            showLitersCanva();
-            CodigoText.codigoInstance.timerRun = false;
+            if (CodigoText.codigoInstance.timer >= 5)
+            {
+                sliderCanva.SetActive(true);
+            }
+
+            if (sliderProgress.value == 2 | CodigoText.codigoInstance.timer >= 20)
+            {
+                CodigoText.codigoInstance.timerRun = false;
+                showLitersCanva();
+            }
         }
     }
     void showLitersCanva()
     {
+        funcionando = false;
         CodigoText.codigoInstance.globeDialogueCanva.SetActive(false);
         sliderCanva.SetActive(false);
         literCanva.SetActive(true);
         literText.text = "Utilizaste " + CodigoText.codigoInstance.liters.ToString() + " litros";
+    }
+
+    public void ResetSlider()
+    {
+        sliderProgress.value = 0;
+        progressFloat = 0;
+        funcionando = true;
     }
 }

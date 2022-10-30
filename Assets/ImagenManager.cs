@@ -74,14 +74,14 @@ public class ImagenManager : MonoBehaviour
 
     public void BasuraBoton()
     {
-        if (instruccionesReady)
+        if (instruccionesReady && !basuraReady)
         {
             basuraMinigame.SetActive(true);
             basuraCanvas1.SetActive(true);
             basuraCanvas2.SetActive(false);
             pieza.SetActive(false);
         }
-        if(basuraReady)
+        if(basuraReady && instruccionesReady)
         {
             botonDucha.SetActive(false);
             botonTele.SetActive(false);
@@ -167,6 +167,13 @@ public class ImagenManager : MonoBehaviour
     {
         contadorVecino += 1;
         pieza.SetActive(true);
+        dialogoNoBasura.SetActive(false);
+        dialogoBasura2.SetActive(false);
+        botonNota.SetActive(true);
+        botonBasura.SetActive(true);
+        botonDucha.SetActive(true);
+        botonInstruc.SetActive(true);
+        botonTele.SetActive(true);
         vecinosEspacio.SetActive(false);
     }
 
@@ -191,7 +198,7 @@ public class ImagenManager : MonoBehaviour
         {
             abuela.SetActive(false);
             punki.SetActive(false);
-            empresario.SetActive(false);
+            empresario.SetActive(true);
         }
     }
 }

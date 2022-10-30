@@ -58,4 +58,12 @@ public class CodigoText : MonoBehaviour
         }
 
     }
+
+    public void ResetTimer()
+    {
+        timerRun = true;
+        timer = 0;
+        liters = 0;
+        timerFloat = 0;
+    }
 }
